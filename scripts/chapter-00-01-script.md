@@ -20,7 +20,7 @@ Draft for review. **Narrator** lines are what the page says. `#Tags` are on-scre
 >
 > To do it, you need two kinds of tools. There's the **software** that real data scientists use every day, and the **math, statistics and machine learning** that run underneath it.
 >
-> One more thing up front. This isn't a pure machine learning class. We care about **big data**: data so large and messy that just *storing* it and *asking it questions* is half the battle.
+> One more thing up front. This isn't only about machine learning. We care about **big data**: data so large and messy that just *storing* it and *asking it questions* is half the battle.
 >
 > Here's your island. Each camp is a chapter. You'll visit them in order. (No skipping ahead. I'm a narrator, not a miracle worker.)
 
@@ -36,31 +36,6 @@ Draft for review. **Narrator** lines are what the page says. `#Tags` are on-scre
 > **Narrator (on wrong answer):** "Close, but no torch. Machine learning is part of it, not the whole thing."
 
 ---
-
-## Episode 0.2: How Your Season Is Scored
-
-**Narrator:**
-> Every season has rules. Here are yours.
->
-> - **Quizzes: 60%.** Seven of them, every two weeks, and they're *cumulative*. Old material can come back to haunt you. (Like a returning player. You thought you were done with them. You were wrong.)
-> - **Assignments: 25%**
-> - **Homeworks: 10%**
-> - **Labs: 5%**
->
-> Now the good news: your **lowest quiz is dropped**. It's your hidden immunity idol. But, *and there's always a but*, it **can't be played on the last quiz**. Just like a real idol, it doesn't work at the final tribal council.
-
-`#IdolCannotBePlayedOnQuiz7`
-
-*Interactive: Grade Calculator*
-- Seven quiz sliders plus one slider each for Assignments, Homeworks and Labs.
-- An **idol icon** moves automatically onto the lowest of quizzes 1–6 and greys it out. Quiz 7 has a lock icon.
-- A big final-grade number updates live, with a stacked bar showing how much each category contributes.
-
-**What just happened:** Quizzes dominate at 60%. The lowest quiz is dropped, but never the last one.
-
-**Tribal Check:** *You scored 55 on Quiz 7 and 70 on Quiz 2, and everything else is higher. Which one gets dropped?*
-(a) Quiz 7 (b) **Quiz 2** ✅
-> **Narrator:** "The idol never works on the final tribal. Quiz 7 always counts."
 
 ## Next time on…
 
@@ -426,7 +401,7 @@ Real tribal ✓: **Season 16 (Micronesia), Episode 10, the Ozzy blindside.**
 >
 > It did fine on the seasons it studied and stumbled on new ones. Why? Fifty seasons is a *tiny* amount of data. And the winner is chosen by a jury, which none of these numbers measure. Learning only works when you have **enough data** and the **future looks like the past**.
 >
-> (We'll come back to this. It has a name, **overfitting**, and it's coming for us later in the course.)
+> (We'll come back to this. It has a name, **overfitting**, and it's coming for us later in this module.)
 
 **What just happened:** Rule-based AI reasons from rules people wrote. Machine learning learns patterns from data, but it needs enough of the right data.
 
@@ -467,7 +442,7 @@ The scrubber picks up at 1986. Each milestone **relights a torch** with a one-li
 
 ---
 
-## Tribal Council (Chapter 1 quiz, 5 questions)
+## Tribal Council (Chapter 1 self-check, 5 questions)
 
 1. Data science data is often *large* and *complex*. Define each in one phrase.
 2. The raw Shot in the Dark data showed 28% safe. Why was that misleading?

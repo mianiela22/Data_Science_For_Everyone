@@ -2,13 +2,13 @@
 
 A visual, interactive introduction to data science in the style of [Seeing Theory](https://seeing-theory.brown.edu/), taught with real Survivor data and a dramatic telenovela-style narrator.
 
-Each chapter follows one lecture from the course, in order. Chapters are split into short episodes (3–5 minutes). Each episode has text on the left, an interactive on the right, a "What just happened" summary, and a one-question **Tribal Check** that lights a torch.
+Each chapter covers one topic, in order. It's a free resource for learning and teaching, and nothing is graded. Chapters are split into short episodes (3–5 minutes). Each episode has text on the left, an interactive on the right, a "What just happened" summary, and a one-question **Tribal Check** that lights a torch.
 
 ## Chapters
 
 | # | Chapter | Topic | Status |
 |---|---|---|---|
-| 0 | Day One | Course overview | ✅ Built |
+| 0 | Day One | Welcome to the island | ✅ Built |
 | 1 | Previously on Data Science | A short history of data science | ✅ Built |
 | 2 | Tribes and Keys | Relational databases, keys, logic | Planned |
 | 3 | Alliance Logic | Relational calculus | Planned |

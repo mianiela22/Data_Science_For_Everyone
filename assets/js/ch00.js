@@ -1,4 +1,4 @@
-/* Chapter 0 interactives: the island map (0.1) and the grade calculator (0.2). */
+/* Chapter 0 interactives: the island map (0.1). */
 (function () {
   "use strict";
   const NS = "http://www.w3.org/2000/svg";
@@ -93,84 +93,5 @@
     svg.appendChild(fog);
 
     host.appendChild(svg);
-  });
-
-  // ---------- 0.2 Grade calculator ----------
-  ST.register("0.2", (stage) => {
-    const host = stage.querySelector("#grade");
-    const quizzes = [84, 70, 91, 88, 76, 85, 79];
-    const other = { Assignments: 90, Homeworks: 95, Labs: 100 };
-    const weights = { Quizzes: 0.6, Assignments: 0.25, Homeworks: 0.1, Labs: 0.05 };
-    const colors = { Quizzes: ST.c.theory, Assignments: ST.c.observed, Homeworks: ST.c.torch, Labs: "#a78bfa" };
-
-    host.innerHTML = `
-      <div style="display:flex;align-items:flex-end;gap:22px;margin-bottom:14px">
-        <div><div class="note">Final grade</div><div class="big-num" id="g-final">–</div></div>
-        <div style="flex:1">
-          <div id="g-bar" style="display:flex;height:22px;border-radius:6px;overflow:hidden;background:var(--line)"></div>
-          <div class="legend" id="g-legend"></div>
-        </div>
-      </div>
-      <table class="data" id="g-quiz"><thead><tr><th style="width:70px">Quiz</th><th>Score</th><th style="width:44px"></th><th style="width:70px"></th></tr></thead><tbody></tbody></table>
-      <div id="g-other" style="margin-top:10px"></div>
-      <p class="note" id="g-note"></p>`;
-
-    const tbody = host.querySelector("#g-quiz tbody");
-    const rows = quizzes.map((v, i) => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td>Quiz ${i + 1}</td><td><input type="range" min="0" max="100" value="${v}" aria-label="Quiz ${i + 1} score"></td>` +
-        `<td class="val" style="font-weight:700"></td><td class="flag" style="font-size:13px"></td>`;
-      tbody.appendChild(tr);
-      tr.querySelector("input").addEventListener("input", (e) => { quizzes[i] = +e.target.value; update(); });
-      return tr;
-    });
-    const otherBox = host.querySelector("#g-other");
-    Object.keys(other).forEach((k) => {
-      const wrap = document.createElement("div");
-      wrap.innerHTML = `<label class="slider">${k} (${weights[k] * 100}%) · <b class="v"></b></label><input type="range" min="0" max="100" value="${other[k]}" aria-label="${k} score">`;
-      wrap.querySelector("input").addEventListener("input", (e) => { other[k] = +e.target.value; update(); });
-      otherBox.appendChild(wrap);
-    });
-
-    function update() {
-      // The idol (dropped quiz) can only land on quizzes 1–6.
-      let drop = 0;
-      for (let i = 1; i < 6; i++) if (quizzes[i] < quizzes[drop]) drop = i;
-      const kept = quizzes.filter((_, i) => i !== drop);
-      const quizAvg = ST.mean(kept);
-      const parts = {
-        Quizzes: quizAvg * weights.Quizzes,
-        Assignments: other.Assignments * weights.Assignments,
-        Homeworks: other.Homeworks * weights.Homeworks,
-        Labs: other.Labs * weights.Labs,
-      };
-      const final = ST.sum(Object.values(parts));
-      host.querySelector("#g-final").textContent = final.toFixed(1);
-
-      rows.forEach((tr, i) => {
-        tr.querySelector(".val").textContent = quizzes[i];
-        const flag = tr.querySelector(".flag");
-        tr.style.opacity = i === drop ? 0.55 : 1;
-        flag.innerHTML = i === drop ? '<span style="color:var(--torch);font-weight:700">🗿 idol</span>' : i === 6 ? "🔒 counts" : "";
-      });
-      otherBox.querySelectorAll(".v").forEach((b, j) => { b.textContent = Object.values(other)[j]; });
-
-      const bar = host.querySelector("#g-bar");
-      bar.innerHTML = "";
-      Object.entries(parts).forEach(([k, v]) => {
-        const s = document.createElement("div");
-        s.style.cssText = `width:${v}%;background:${colors[k]};transition:width .2s`;
-        s.title = `${k}: ${v.toFixed(1)} points`;
-        bar.appendChild(s);
-      });
-      host.querySelector("#g-legend").innerHTML = Object.entries(parts)
-        .map(([k, v]) => `<span><i style="background:${colors[k]}"></i>${k} ${v.toFixed(1)}</span>`).join("");
-
-      const lowestOverall = quizzes.indexOf(Math.min(...quizzes));
-      host.querySelector("#g-note").innerHTML = lowestOverall === 6 && quizzes[6] < quizzes[drop]
-        ? "Your lowest score is Quiz 7, but the idol can't be played there. It goes to your lowest of Quizzes 1–6 instead. <span class='tag'>#IdolCannotBePlayedOnQuiz7</span>"
-        : `The idol is on Quiz ${drop + 1}, your lowest of Quizzes 1–6. Quiz average after the drop: ${quizAvg.toFixed(1)}.`;
-    }
-    update();
   });
 })();

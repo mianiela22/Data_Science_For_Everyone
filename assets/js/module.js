@@ -3,7 +3,7 @@ window.MODULE = {
   title: "Outwit, Outplay, Outcompute",
   subtitle: "Data Science Through Survivor",
   chapters: [
-    { n: 0, title: "Day One", topic: "Course overview", href: "chapters/00-day-one.html", ready: true },
+    { n: 0, title: "Day One", topic: "Welcome to the island", href: "chapters/00-day-one.html", ready: true },
     { n: 1, title: "Previously on Data Science", topic: "A short history of data science", href: "chapters/01-previously-on-data-science.html", ready: true },
     { n: 2, title: "Tribes and Keys", topic: "Relational databases, keys, foreign keys, logic" },
     { n: 3, title: "Alliance Logic", topic: "Relational calculus" },

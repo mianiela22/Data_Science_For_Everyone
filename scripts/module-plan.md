@@ -75,12 +75,11 @@ Each row is one episode, in the same order as your material.
 ---
 
 ## Chapter 0: Day One
-*Course overview · 2 episodes*
+*Module overview · 1 episode*
 
 | # | Topic (course) | Survivor framing | Interactive |
 |---|---|---|---|
 | 0.1 | What the course is: useful, non-obvious knowledge from data; tools + math/stats/ML; big data, not pure ML | "Welcome to the island." The narrator introduces the game. | **Island map**: 10 camps, one per chapter. Hover a camp to see its topic. Topics that aren't in the slides yet (Spark, EM, neural nets, …) sit under fog labeled "coming next season." |
-| 0.2 | Grading: quizzes 60% (7, lowest dropped except the last), assignments 25%, homeworks 10%, labs 5% | The dropped quiz is your **hidden immunity idol**, and like a real idol, it can't save you at the final tribal (the last quiz). | **Grade calculator**: drag 7 quiz sliders. The idol automatically "plays" on your lowest quiz, but never on quiz 7. |
 
 ---
 
@@ -256,13 +255,13 @@ Each row is one episode, in the same order as your material.
 ---
 
 ## End of every chapter
-- **Tribal Council:** a 3–5 question quiz in the style of the course's cumulative quizzes.
+- **Tribal Council:** 3–5 self-check questions with answers to reveal. Nothing is graded.
 - **Next time on…:** a narrator cliffhanger leading into the next chapter.
 
 ## Episode totals
 | Ch | Title | Episodes |
 |---|---|---|
-| 0 | Day One | 2 |
+| 0 | Day One | 1 |
 | 1 | Previously on Data Science | 13 |
 | 2 | Tribes and Keys | 8 |
 | 3 | Alliance Logic | 7 |
@@ -273,7 +272,7 @@ Each row is one episode, in the same order as your material.
 | 8 | Down the Mountain | 13 |
 | 9 | Newton's Shortcut | 6 |
 | 10 | The Whole Island Votes | 8 |
-| | **Total** | **91 episodes** (about 5–7 hours of material) |
+| | **Total** | **90 episodes** (about 5–7 hours of material) |
 
 ## Numbers to double-check when building each chapter
 - The p-values for 1.5 (age, and gender: 29 of 49 first boots were women).
