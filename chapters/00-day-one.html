@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+  <title>Day One · Outwit, Outplay, Outcompute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,400&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-chapter="ch00" data-chapter-title="Chapter 0: Day One" data-next="01-previously-on-data-science.html">
+  <header class="topbar">
+    <a class="home" href="../index.html">Outwit, Outplay, <span>Outcompute</span></a>
+    <span class="chapter-name">Chapter 0 · Day One</span>
+    <nav class="torches" aria-label="Episodes"></nav>
+  </header>
+
+  <main class="layout">
+    <div class="text-col">
+
+      <!-- ===================== COVER ===================== -->
+      <section class="episode" data-ep="start" data-title="Day One" data-kind="cover">
+        <div class="cover-kicker">Chapter 0</div>
+        <h1 class="cover-title">Day One</h1>
+        <p class="previously">Thirty-nine days. Eighteen strangers. One island. And you, about to learn data science through the most dramatic show on television. <span class="aside">(Sorry, other shows. It's true.)</span></p>
+        <p>This short chapter tells you what the module is and how your season is scored. Two episodes, about five minutes.</p>
+        <ul class="ep-list"></ul>
+      </section>
+
+      <!-- ===================== 0.1 ===================== -->
+      <section class="episode" data-ep="0.1" data-title="Welcome to the Island">
+        <h2>Welcome to the Island</h2>
+        <p>This module is about one thing: getting <b>useful, non-obvious knowledge out of data</b>. That's what data science is.</p>
+        <p>To do it, you need two kinds of tools. There's the <b>software</b> that real data scientists use every day, and the <b>math, statistics and machine learning</b> that run underneath it.</p>
+        <p>One more thing up front. This isn't a pure machine learning class. We care about <b>big data</b>: data so large and messy that just <i>storing</i> it and <i>asking it questions</i> is half the battle.</p>
+        <p>Here's your island. Each camp is a chapter, and you'll visit them in order. <span class="aside">(No skipping ahead. I'm a narrator, not a miracle worker.)</span> Hover a camp to see what's there. Past the last camp, it's foggy. That's next season.</p>
+
+        <div class="wjh"><b>What just happened</b>Data science = useful, non-obvious knowledge from data. This module covers the tools, the math, and big data.</div>
+
+        <div class="check" data-answer="b"
+             data-right="Exactly. Big data, plus the tools and math to handle it."
+             data-wrong="Close, but no torch. Machine learning is part of it, not the whole thing.">
+          <div class="q-label">Tribal Check</div>
+          <p class="q">This module's focus is closest to…</p>
+          <div class="opts">
+            <button class="opt" data-k="a">Pure machine learning</button>
+            <button class="opt" data-k="b">Big data, plus the tools and math to work with it</button>
+            <button class="opt" data-k="c">Spreadsheet skills</button>
+          </div>
+          <p class="fb"></p>
+        </div>
+
+        <div class="stage" id="stage-0-1">
+          <p class="panel-title">The island · 10 camps</p>
+          <div id="island"></div>
+          <div id="camp-info" class="wjh" style="border-left-color: var(--torch)"><b>Camp info</b>Hover or tap a camp.</div>
+        </div>
+      </section>
+
+      <!-- ===================== 0.2 ===================== -->
+      <section class="episode" data-ep="0.2" data-title="How Your Season Is Scored">
+        <h2>How Your Season Is Scored</h2>
+        <p>Every season has rules. Here are yours.</p>
+        <ul>
+          <li><b>Quizzes: 60%.</b> Seven of them, every two weeks, and they're <i>cumulative</i>. Old material can come back to haunt you. <span class="aside">(Like a returning player. You thought you were done with them. You were wrong.)</span></li>
+          <li><b>Assignments: 25%</b></li>
+          <li><b>Homeworks: 10%</b></li>
+          <li><b>Labs: 5%</b></li>
+        </ul>
+        <p>Now the good news: your <b>lowest quiz is dropped</b>. It's your hidden immunity idol.</p>
+        <p>But, <i>and there's always a but</i>, it <b>can't be played on the last quiz</b>. Just like a real idol, it doesn't work at the final tribal council.</p>
+        <p><span class="tag">#IdolCannotBePlayedOnQuiz7</span></p>
+        <p>Drag the sliders and watch where the idol goes.</p>
+
+        <div class="wjh"><b>What just happened</b>Quizzes dominate at 60%. The lowest quiz is dropped, but never the last one.</div>
+
+        <div class="check" data-answer="b"
+             data-right="The idol never works on the final tribal. Quiz 7 always counts, so the idol goes to Quiz 2."
+             data-wrong="Ouch. The idol never works on the final tribal. Quiz 7 always counts.">
+          <div class="q-label">Tribal Check</div>
+          <p class="q">You scored 55 on Quiz 7 and 70 on Quiz 2, and every other quiz is higher. Which one gets dropped?</p>
+          <div class="opts">
+            <button class="opt" data-k="a">Quiz 7</button>
+            <button class="opt" data-k="b">Quiz 2</button>
+          </div>
+          <p class="fb"></p>
+        </div>
+
+        <div class="stage" id="stage-0-2">
+          <p class="panel-title">Grade calculator</p>
+          <div id="grade"></div>
+        </div>
+      </section>
+
+      <!-- ===================== NEXT TIME ===================== -->
+      <section class="episode" data-ep="next" data-title="Next time on…" data-kind="council">
+        <div class="cover-kicker">Next time on…</div>
+        <h1 class="cover-title">Previously on Data Science</h1>
+        <p class="previously">A coin flip that isn't a coin flip, a map that solved a mystery, and a robot that got voted off the island. Twice.</p>
+        <p><a class="btn torch" href="01-previously-on-data-science.html">Start Chapter 1 →</a></p>
+        <h3>Your torches</h3>
+        <ul class="ep-list"></ul>
+      </section>
+    </div>
+
+    <aside class="stage-col" aria-label="Interactive"></aside>
+    <div class="nav-col"></div>
+  </main>
+
+  <script src="../assets/js/module.js"></script>
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/ch00.js"></script>
+</body>
+</html>

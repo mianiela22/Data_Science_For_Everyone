@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+  <title>Previously on Data Science · Outwit, Outplay, Outcompute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,400&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/ch01.css">
+</head>
+<body data-chapter="ch01" data-chapter-title="Chapter 1: Previously on Data Science">
+  <header class="topbar">
+    <a class="home" href="../index.html">Outwit, Outplay, <span>Outcompute</span></a>
+    <span class="chapter-name">Chapter 1 · Previously on Data Science</span>
+    <nav class="torches" aria-label="Episodes"></nav>
+  </header>
+
+  <main class="layout">
+    <div class="text-col">
+
+<!-- ======================================================= COVER -->
+<section class="episode" data-ep="start" data-title="Previously on Data Science" data-kind="cover">
+  <div class="cover-kicker">Chapter 1</div>
+  <h1 class="cover-title">Previously on Data Science</h1>
+  <p class="previously">Previously on Data Science: absolutely nothing. It's Chapter One. But this story didn't start with computers. It started with dice, a deadly disease, and a lot of very confident men.</p>
+  <p>Thirteen short episodes, about 3–5 minutes each. Answer each Tribal Check to light its torch.</p>
+  <ul class="ep-list"></ul>
+</section>
+
+<!-- ======================================================= 1.1 -->
+<section class="episode" data-ep="1.1" data-title="What Is Data Science?">
+  <h2>What Is Data Science?</h2>
+  <p>Every Survivor fan has heard this one: <i>win immunity, win the game.</i></p>
+  <p>Sounds obvious, right? Before we look, I want your guess. Use the slider on the right, lock it in, then reveal.</p>
+
+  <div class="later" data-key="rule-revealed">
+    <p class="big-line">Thirty-eight percent.</p>
+    <p>The "obvious" strategy is wrong most of the time. <span class="tag">#ObviousIsNotAlwaysTrue</span></p>
+    <p>And <i>that</i> is data science: <b>extracting actionable knowledge from data</b>, especially knowledge you wouldn't have guessed.</p>
+    <p>The data is usually:</p>
+    <ul>
+      <li><b>Large:</b> too big to fit in a single server's memory (RAM).</li>
+      <li><b>Complex:</b> not one tidy table, and often <b>multi-modal</b>, meaning several kinds of data at once.</li>
+    </ul>
+    <p>Survivor is a perfect example. Flip the cards under the chart to see everything we know about it.</p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>Data science = actionable, non-obvious knowledge from data that is often large and complex.</div>
+  <div class="check" data-answer="b" data-right="Yes. Several kinds of data at once = multi-modal." data-wrong="Not quite. Think about how many <i>kinds</i> of data that is.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">Survivor's data includes vote tables, challenge results and video footage. That makes it…</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Small</button>
+      <button class="opt" data-k="b">Multi-modal</button>
+      <button class="opt" data-k="c">Relational only</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-1"></div>
+</section>
+
+<!-- ======================================================= 1.2 -->
+<section class="episode" data-ep="1.2" data-title="Counting People">
+  <h2>Counting People</h2>
+  <p>Statistics started in the <b>1600s</b> with something simple: <b>counting people and money</b>. Governments wanted to know how many people lived where, how many died, and what everyone owned. That's <b>economic and demographic data</b>.</p>
+  <p>Every Survivor season starts the same way: a cast of strangers, and you instantly start sizing them up. How old? Where from? Congratulations, you're doing 17th-century statistics. <span class="aside">(Minus the plague. Mostly.)</span></p>
+  <p>On the right: the ages of every US castaway, and the states they came from. Pick a season to see how one cast compares with everyone.</p>
+
+  <div class="wjh"><b>What just happened</b>The first statistics were demographic counts: summaries of a population. Histograms and maps are still how we start.</div>
+  <div class="check" data-answer="a" data-right="Right. Counting people and money came first." data-wrong="Earlier than that. Think census, not science lab.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">Statistics began with which kind of data?</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Economic and demographic</button>
+      <button class="opt" data-k="b">Genetic</button>
+      <button class="opt" data-k="c">Social media</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-2"></div>
+</section>
+
+<!-- ======================================================= 1.3 -->
+<section class="episode" data-ep="1.3" data-title="Born From Gambling">
+  <h2>Born From Gambling</h2>
+  <p>In the <b>17th century</b>, two French mathematicians, <b>Blaise Pascal</b> and <b>Pierre de Fermat</b>, traded letters about a gambling problem. How should you split the pot if a game of chance ends early? Their answer became <b>probability theory</b>.</p>
+  <p>Survivor has its own gamble: the <b>Shot in the Dark</b>. Give up your vote, draw a scroll. Six scrolls. One says <i>safe</i>. So the probability should be <span class="theory">1 in 6</span>.</p>
+  <p>Let's test that. Play the shot a few times, then play it 100 times.</p>
+
+  <div class="later" data-key="sitd-played">
+    <p>See? The more you play, the closer the <span class="observed">green bars</span> get to the <span class="theory">blue bars</span>. That's the <b>long-run frequency</b> idea. <span class="aside">(Same as a coin flip, now with more torches.)</span></p>
+    <p>Now let's check the <i>real</i> Survivor history. Press <b>Load real data</b>.</p>
+  </div>
+  <div class="later" data-key="sitd-real">
+    <p class="big-line">Twenty-eight percent?!</p>
+    <p>Did these players beat the odds? Is the scroll bag rigged?</p>
+    <p><span class="aside">(They did not. It is not. Hold that thought.)</span> <span class="tag">#DuplicatesAreLiars</span></p>
+    <p>Look closely at the table. Some players appear more than once. Press <b>Count each player's shot once</b>.</p>
+  </div>
+  <div class="later" data-key="sitd-dedup">
+    <p class="big-line">Four out of twenty-four. Exactly one in six.</p>
+    <p>Pascal and Fermat would be thrilled. The math was right all along. The <i>data</i> just needed a closer look: the same shot was logged again in revotes and in episodes with two boots.</p>
+    <p>Remember this. It matters in Chapter 2.</p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>Probability began with gambling, and the observed frequency approaches the true probability. Before you count rows, know what one row means.</div>
+  <div class="check" data-answer="b" data-right="Exactly. Duplicate rows inflated the count." data-wrong="Nope. Look at who appears more than once in the table.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">Why did the raw data show 28%?</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Players are lucky</button>
+      <button class="opt" data-k="b">The same shot appeared in several rows</button>
+      <button class="opt" data-k="c">The bag had two safe scrolls</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-3"></div>
+</section>
+
+<!-- ======================================================= 1.4 -->
+<section class="episode" data-ep="1.4" data-title="John Snow's Map">
+  <h2>John Snow's Map</h2>
+  <p>London, <b>1854</b>. Cholera is tearing through the Broad Street neighborhood. Everyone <i>knows</i> the cause: "bad air."</p>
+  <p class="big-line">Everyone is wrong.</p>
+  <p>A doctor named <b>John Snow</b> goes door to door, <b>interviews residents</b>, and <b>marks every case on a map</b>. The deaths cluster around one spot: a <b>public water pump</b>. Data beats the story. <span class="tag">#DataBeatsVibes</span></p>
+  <p>Survivor has its own "bad air." After every tribal, players explain what happened: <i>"He was a threat." "It was random."</i> But the votes don't lie.</p>
+  <p>This is a real tribal council: <b>Season 16 (Micronesia), Episode 10</b>. Click each castaway to reveal their vote.</p>
+
+  <div class="later" data-key="blindside-done">
+    <p>Five arrows. One target. One alliance pulling the strings, the way one pump was behind every case. You didn't need anyone's explanation. You needed the map.</p>
+    <p>Toggle <b>Show Snow's map</b> to see the same pattern in 1854.</p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>Snow collected evidence, plotted it, and found the source. It's one of the earliest examples of data-driven reasoning.</div>
+  <div class="check" data-answer="b" data-right="Yes. Collect the evidence, then map it." data-wrong="Not quite. Snow's tool was much simpler than that.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">What did Snow do that the "bad air" believers didn't?</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Used a microscope</button>
+      <button class="opt" data-k="b">Collected and mapped the actual cases</button>
+      <button class="opt" data-k="c">Asked the government</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-4"></div>
+</section>
+
+<!-- ======================================================= 1.5 -->
+<section class="episode" data-ep="1.5" data-title="Is It Real, or Just Chance?">
+  <h2>Is It Real, or Just Chance?</h2>
+  <p>Between the late 1800s and about 1930, statistics grew up. Its big question: <b>is a pattern real, or did it happen by chance?</b></p>
+  <p>Here's a Survivor pattern for you. The average castaway is <b>33.3</b> years old. The average <b>first person voted out</b> is <b>36.0</b>.</p>
+  <p>So: are older players targeted first? Or is a three-year gap just luck?</p>
+  <p><b>Ronald Fisher</b> gave us the tool: the <b>null hypothesis</b>. You <i>assume nothing is going on</i> ("age doesn't matter") and ask how often pure chance would give you a gap this big.</p>
+  <p>On the right, each shuffle picks 49 random castaways as pretend first boots. Shuffle a lot.</p>
+
+  <div class="later" data-key="null-done">
+    <p>Age: chance rarely does that, only about 2–3% of the time (your exact number wobbles a little with each run). That's suspicious. <span class="tag">#SuspiciouslyOld</span></p>
+    <p>Now switch to <b>Gender</b>. Chance does that about 10% of the time, which is too often to rule out luck. Same game, same method, two different verdicts. <i>That</i> is why we test instead of guessing.</p>
+    <h3>Fisher's other idea</h3>
+    <p>Fisher also asked: what's the best <b>straight line</b> to separate two groups? That's the <b>linear discriminator</b>. Try it in the bottom panel: drag the line's handles to separate early boots from jury members. <span class="aside">(Hold onto that one. It comes back when we get to machine learning.)</span></p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>The null hypothesis asks how surprising the data would be if nothing were going on. A small p-value means chance alone rarely produces it.</div>
+  <div class="check" data-answer="b" data-right="Exactly. It's about how often chance alone does this." data-wrong="Careful. A p-value isn't the chance that age matters.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">A p-value of 0.025 means…</p>
+    <div class="opts">
+      <button class="opt" data-k="a">There's a 2.5% chance age matters</button>
+      <button class="opt" data-k="b">If age didn't matter, a gap this big would show up about 2.5% of the time</button>
+      <button class="opt" data-k="c">2.5% of players are old</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-5"></div>
+</section>
+
+<!-- ======================================================= 1.6 -->
+<section class="episode" data-ep="1.6" data-title="How Sure Are We?">
+  <h2>How Sure Are We?</h2>
+  <p>Two more founders: <b>Egon Pearson</b> and <b>Jerzy Neyman</b>. They pointed out you can be wrong in <i>two</i> ways:</p>
+  <ul>
+    <li><b>Type I error:</b> you think there's a pattern, and there isn't. <span class="aside">(Calling a blindside that never happens.)</span></li>
+    <li><b>Type II error:</b> there <i>is</i> a pattern, and you miss it. <span class="aside">(Not seeing the blindside coming. The classic.)</span></li>
+  </ul>
+  <p><b>Power</b> is your ability to catch a real pattern. A <b>confidence interval</b> gives a range for the true value instead of one number.</p>
+  <p>Move the sliders. How many first boots do you need to reliably catch a real age gap?</p>
+  <p>Fewer castaways means a wider interval and more blindsides you don't see coming. More data, more power. <span class="aside">(Data scientists love more data. It's a whole thing.)</span></p>
+
+  <div class="wjh"><b>What just happened</b>Type I = false alarm. Type II = missed pattern. Power rises and confidence intervals narrow as you collect more data.</div>
+  <div class="check" data-answer="b" data-right="Right. A real pattern you missed is a Type II error." data-wrong="That's the other one. Type I is a false alarm.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">You conclude older players aren't targeted, but they actually are. That's a…</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Type I error</button>
+      <button class="opt" data-k="b">Type II error</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-6"></div>
+</section>
+
+<!-- ======================================================= 1.7 -->
+<section class="episode" data-ep="1.7" data-title="Computers Learn to Store Data">
+  <h2>Computers Learn to Store Data</h2>
+  <p>Fast-forward. The <b>1940s</b> bring <b>ENIAC</b>, the first computer. In <b>1966</b>, IBM builds <b>IMS</b>, one of the first database systems, to keep track of parts for the <b>Apollo</b> moon program.</p>
+  <p>In IMS, data was linked by <b>pointers</b>: each record says where the next one lives. To find something, you follow the trail.</p>
+  <p>Then <b>Ted Codd</b> has an idea: put data in <b>plain tables</b>, and let people <b>ask for what they want</b> instead of spelling out how to find it.</p>
+  <p>Try both ways to find the winner of <b>Season 20</b>. Then press <b>Reorganize storage</b>.</p>
+
+  <div class="later" data-key="pointer-broken">
+    <p>The pointer trail broke the moment we moved the furniture. The table didn't care. That's called <b>data independence</b>, and it'll be your whole personality in Chapter 2.</p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>Early databases followed pointers. Codd's relational model uses tables and declarative questions, so storage can change without breaking queries.</div>
+  <div class="check" data-answer="b" data-right="Yes. IMS tracked parts for the Apollo program." data-wrong="Think bigger. Like, moon-sized.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">What did IMS originally track?</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Bank accounts</button>
+      <button class="opt" data-k="b">Inventory for the Apollo program</button>
+      <button class="opt" data-k="c">TV ratings</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-7"></div>
+</section>
+
+<!-- ======================================================= 1.8 -->
+<section class="episode" data-ep="1.8" data-title="Can a Machine Think?">
+  <h2>Can a Machine Think?</h2>
+  <p>Now, artificial intelligence. AI means programming an <b>intelligent agent</b>: something that can solve <i>new</i> problems, show <b>emergent behavior</b>, and do things it wasn't specifically programmed to do.</p>
+  <p>The dream is old. In the <b>17th century</b>, <b>Leibniz</b> imagined a <i>calculus ratiocinator</i>, a reasoning machine. It was a precursor to mathematical logic.</p>
+  <p>In <b>1943</b>, <b>McCulloch and Pitts</b> showed that <b>artificial neurons can do logic</b>. In <b>1951</b>, <b>Marvin Minsky</b> built <b>SNARC</b>, an early neural network machine. And in <b>1956</b>, at a workshop at <b>Dartmouth</b>, <b>John McCarthy</b> (who also invented the Lisp language) gave the field its name: <b>artificial intelligence</b>.</p>
+  <p>So can a neuron do logic? Let's see if one can cast your vote. Tune the weights and threshold to pass both challenges.</p>
+
+  <div class="wjh"><b>What just happened</b>An artificial neuron adds weighted inputs and compares the total to a threshold. With the right weights, it computes logic like AND and OR.</div>
+  <div class="check" data-answer="b" data-right="Correct. McCarthy, Dartmouth, 1956." data-wrong="Good guess, but no. It happened at a summer workshop in New Hampshire.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">Who named the field "artificial intelligence," and where?</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Turing, at Cambridge</button>
+      <button class="opt" data-k="b">McCarthy, at Dartmouth (1956)</button>
+      <button class="opt" data-k="c">Minsky, at MIT</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-8"></div>
+</section>
+
+<!-- ======================================================= 1.9 -->
+<section class="episode" data-ep="1.9" data-title="AI as Search">
+  <h2>AI as Search</h2>
+  <p>Early AI had real wins, and most of them came from one idea: <b>AI as search</b>. Set a <b>goal</b>, break it into <b>subgoals</b>, try moves, and <b>backtrack</b> when you hit a dead end.</p>
+  <p>That idea powered <b>Newell and Simon's General Problem Solver</b>, <b>Samuel's checkers program</b>, and, in a different style, <b>ELIZA</b> (MIT, 1964–66), a chatbot that faked conversation with clever rules.</p>
+  <p>Survivor fans already know this one. It's the puzzle at the end of every challenge.</p>
+  <p>The puzzle on the right: place <b>four tribe flags</b> on a 4×4 board so that no two share a row, column or diagonal. Watch the search work it out one row at a time. Each row is a <b>subgoal</b>.</p>
+  <p>Try, fail, go back, try again. It's every castaway at the final puzzle, except the computer doesn't cry.</p>
+
+  <div class="wjh"><b>What just happened</b>Early AI treated intelligence as search: goals, subgoals and backtracking.</div>
+  <div class="check" data-answer="b" data-right="Yes. It backs up and tries the next option." data-wrong="Watch the red nodes. What happens right after one appears?">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">When the search hits a dead end it…</p>
+    <div class="opts">
+      <button class="opt" data-k="a">Gives up</button>
+      <button class="opt" data-k="b">Backtracks to try another path</button>
+      <button class="opt" data-k="c">Restarts from scratch</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-9"></div>
+</section>
+
+<!-- ======================================================= 1.10 -->
+<section class="episode" data-ep="1.10" data-title="The Turing Tribal">
+  <h2>The Turing Tribal</h2>
+  <p>In <b>1950</b>, <b>Alan Turing</b> proposed a test. An interrogator sends <b>written questions</b> to a human and a computer and tries to tell which is which. If they can't, the machine passes.</p>
+  <p>ELIZA impressed people. It came <i>nowhere near</i> passing. Let's find out why.</p>
+  <p>You're the interrogator. For each jury question, one answer comes from a castaway and one from an ELIZA-style program. Pick the program.</p>
+
+  <div class="later" data-key="turing-done">
+    <p>Experts said human-level AI was just around the corner. The corner turned out to be very, very far away. <span class="tag">#ConfidentlyIncorrect</span></p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>The Turing Test asks whether a machine's written answers can pass as human. ELIZA's tricks fooled some people but couldn't pass, and early predictions about AI were wildly optimistic.</div>
+  <div class="check" data-answer="b" data-right="Right. Written questions only, so voice and looks can't give anyone away." data-wrong="Not quite. Turing wanted to hide everything except the words.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">In the Turing Test, the interrogator communicates…</p>
+    <div class="opts">
+      <button class="opt" data-k="a">By voice</button>
+      <button class="opt" data-k="b">Through written questions</button>
+      <button class="opt" data-k="c">Face to face</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-10"></div>
+</section>
+
+<!-- ======================================================= 1.11 -->
+<section class="episode" data-ep="1.11" data-title="The AI Winter">
+  <h2>The AI Winter</h2>
+  <p>And then the money ran out. One by one, AI's big ideas got <b>voted off the island</b>.</p>
+  <p>Drag the timeline (or press play) and watch each idea's torch go out.</p>
+  <div class="later" data-key="winter-done">
+    <p>The tribe has spoken. Neural networks, please bring me your torch.</p>
+    <p><span class="aside">(Spoiler: they're coming back. They always come back.)</span></p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>Overpromising led to AI winters, long periods of cut funding after the hype.</div>
+  <div class="check" data-answer="b" data-right="Yes. Minsky and Papert's Perceptrons, 1969." data-wrong="Not that one. Check the 1969 card on the timeline.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">Which 1969 book seemed to kill neural networks?</p>
+    <div class="opts">
+      <button class="opt" data-k="a"><i>Computing Machinery and Intelligence</i></button>
+      <button class="opt" data-k="b"><i>Perceptrons</i></button>
+      <button class="opt" data-k="c"><i>The Lighthill Report</i></button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-11"></div>
+</section>
+
+<!-- ======================================================= 1.12 -->
+<section class="episode" data-ep="1.12" data-title="Rules vs. Learning">
+  <h2>Rules vs. Learning</h2>
+  <p>Here's what old-school AI could do: <b>reason</b>. Search game moves with <b>minimax</b>. Chain rules: if <b>A → B</b> and <b>B → C</b>, then <b>A → C</b>.</p>
+  <p>Here's what it couldn't do: <b>learn</b>.</p>
+  <p><b>Machine learning</b> is AI that <b>learns from past data or experience</b>, and it's often statistical. Let's put them head to head.</p>
+  <p><b>Round 1:</b> pick a rule for choosing each season's winner from its finalists. <b>Round 2:</b> let a model learn from seasons 1–40, then predict 41–50.</p>
+
+  <div class="later" data-key="learn-done">
+    <p class="big-line">Plot twist! The machine <i>lost</i>. <span class="tag">#NotMagic</span></p>
+    <p>It did fine on the seasons it studied and stumbled on new ones. Why? Fifty seasons is a <i>tiny</i> amount of data. And the winner is chosen by a jury, which none of these numbers measure. Learning only works when you have <b>enough data</b> and the <b>future looks like the past</b>.</p>
+    <p><span class="aside">(We'll come back to this. It has a name, <b>overfitting</b>, and it's coming for us later in the course.)</span></p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>Rule-based AI reasons from rules people wrote. Machine learning learns patterns from data, but it needs enough of the right data.</div>
+  <div class="check" data-answer="b" data-right="Exactly. Learning from data is the whole point." data-wrong="Not quite. Rules are the <i>old</i> way.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">What's the key difference between ML and traditional AI?</p>
+    <div class="opts">
+      <button class="opt" data-k="a">ML is faster</button>
+      <button class="opt" data-k="b">ML learns from past data or experience</button>
+      <button class="opt" data-k="c">ML uses rules</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-12"></div>
+</section>
+
+<!-- ======================================================= 1.13 -->
+<section class="episode" data-ep="1.13" data-title="The Comeback">
+  <h2>The Comeback</h2>
+  <p>Remember neural networks? Voted out in 1969? Well. Every great season needs a <b>return from the Edge</b>.</p>
+  <p>Step through the timeline. Each milestone relights a torch.</p>
+  <div class="later" data-key="comeback-done">
+    <p>Voted out in 1969. Back from the Edge in 1986. Running the whole game today. Honestly? Best comeback story ever. <span class="tag">#BackFromTheEdge</span></p>
+  </div>
+
+  <div class="wjh"><b>What just happened</b>Starting with backpropagation in 1986, machine learning took over AI, powered by more data, faster GPUs and bigger models.</div>
+  <div class="check" data-answer="b" data-right="Yes. CUDA opened GPUs to general computing." data-wrong="Close in time, but no. Look for the 2007 card.">
+    <div class="q-label">Tribal Check</div>
+    <p class="q">Which made general-purpose GPU computing possible and led to TensorFlow and PyTorch?</p>
+    <div class="opts">
+      <button class="opt" data-k="a">ImageNet</button>
+      <button class="opt" data-k="b">NVIDIA CUDA</button>
+      <button class="opt" data-k="c">Word2Vec</button>
+    </div>
+    <p class="fb"></p>
+  </div>
+
+  <div class="stage" id="stage-1-13"></div>
+</section>
+
+<!-- ======================================================= COUNCIL -->
+<section class="episode" data-ep="council" data-title="Tribal Council" data-kind="council">
+  <div class="cover-kicker">End of Chapter 1</div>
+  <h1 class="cover-title">Tribal Council</h1>
+  <p>Five questions on the whole chapter. Answer each in your own words, then reveal the answer to check yourself.</p>
+  <div id="council"></div>
+
+  <h3>Next time on…</h3>
+  <p class="previously">There are eight Mikes on this show. <i>Eight.</i> So how does a database know which Mike you mean? Next time: keys, tables, and the end of pointers forever. <span class="aside">(Okay, mostly forever.)</span></p>
+  <p class="note">Chapter 2, Tribes and Keys, is coming soon.</p>
+  <h3>Your torches</h3>
+  <ul class="ep-list"></ul>
+</section>
+
+    </div>
+    <aside class="stage-col" aria-label="Interactive"></aside>
+    <div class="nav-col"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="../data/derived/ch01-data.js"></script>
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/ch01-a.js"></script>
+  <script src="../assets/js/ch01-b.js"></script>
+</body>
+</html>

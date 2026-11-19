@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+  <title>Outwit, Outplay, Outcompute</title>
+  <meta name="description" content="A visual, interactive introduction to data science, taught through Survivor data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,400&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .hero { max-width: 980px; margin: 0 auto; padding: 72px 24px 32px; }
+    .hero .kicker { font-size: 14px; letter-spacing: .18em; text-transform: uppercase; color: var(--torch); font-weight: 700; }
+    .hero h1 { font-family: var(--font-voice); font-size: clamp(40px, 7vw, 76px); line-height: 1; margin: 10px 0 8px; font-weight: 800; }
+    .hero h1 em { font-style: italic; font-weight: 400; color: var(--torch); }
+    .hero .sub { font-size: 22px; color: var(--ink-soft); margin: 0 0 24px; }
+    .hero .previously { max-width: 640px; }
+    .stats { display: flex; gap: 32px; flex-wrap: wrap; margin: 28px 0 0; }
+    .stats div { font-size: 14px; color: var(--muted); }
+    .stats b { display: block; font-family: var(--font-voice); font-size: 30px; color: var(--ink); }
+    .chapters { max-width: 980px; margin: 0 auto; padding: 16px 24px 48px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .ch-card { display: block; padding: 18px 18px 16px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); background: #fff; transition: border-color .15s, transform .15s; position: relative; }
+    a.ch-card:hover { border-color: var(--torch); transform: translateY(-2px); }
+    .ch-card .n { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--torch); font-weight: 700; }
+    .ch-card h3 { font-family: var(--font-voice); font-size: 23px; margin: 4px 0 4px; line-height: 1.2; }
+    .ch-card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+    .ch-card.soon { background: var(--panel); color: var(--muted); }
+    .ch-card.soon h3 { color: var(--ink-soft); }
+    .ch-card .badge { position: absolute; top: 16px; right: 16px; font-size: 12px; font-weight: 700; color: var(--muted); }
+    footer { max-width: 980px; margin: 0 auto; padding: 24px 24px 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="kicker">A visual introduction to data science</div>
+    <h1>Outwit, Outplay, <em>Outcompute</em></h1>
+    <p class="sub">Data Science Through Survivor</p>
+    <p class="previously">Thirty-nine days. Eighteen strangers. Fifty seasons of votes, blindsides and challenges. And you, learning data science through the most dramatic show on television. <span class="aside">(Sorry, other shows. It's true.)</span></p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main class="chapters" id="chapters"></main>
+
+  <footer>
+    <p>Each chapter is a set of short episodes. Read a little, play with the interactive, then answer one Tribal Check to light your torch. The layout is inspired by <a href="https://seeing-theory.brown.edu/">Seeing Theory</a>.</p>
+    <p>Survivor data comes from the open <a href="https://github.com/doehm/survivoR">survivoR</a> dataset by Daniel Oehm (MIT license), US seasons 1–51. This is an independent teaching project. It isn't affiliated with or endorsed by the show or its network.</p>
+  </footer>
+
+  <script src="assets/js/module.js"></script>
+  <script>
+    (function () {
+      const M = window.MODULE;
+      const box = document.getElementById("chapters");
+      M.chapters.forEach((c) => {
+        const a = document.createElement(c.ready ? "a" : "div");
+        a.className = "ch-card" + (c.ready ? "" : " soon");
+        if (c.ready) a.href = c.href;
+        a.innerHTML = `<div class="n">Chapter ${c.n}</div><h3>${c.title}</h3><p>${c.topic}</p>` +
+          (c.ready ? "" : '<span class="badge">Coming soon</span>');
+        box.appendChild(a);
+      });
+      document.getElementById("stats").innerHTML =
+        "<div><b>11</b>chapters</div><div><b>51</b>seasons of data</div><div><b>5,882</b>real votes</div><div><b>12,501</b>challenge results</div>";
+    })();
+  </script>
+</body>
+</html>
